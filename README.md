@@ -1,2 +1,0 @@
-# suunnittelumallit
-Suunnittelumallit tehtävien palautukset
