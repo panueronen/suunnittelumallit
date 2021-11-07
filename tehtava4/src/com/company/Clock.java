@@ -22,6 +22,8 @@ public class Clock extends Observable {
         time++;
         notifyObservers();
     }
+
+    //if time needs to be set manually and used for testing.
     public void setTime(int time){
         setChanged();
         this.time = time;

@@ -13,5 +13,8 @@ public class Digitalclock implements Observer {
     @Override
     public void update(Observable o, Object time) {
         System.out.println("time is " + Clock.getinstance().getTime());
+
+        //TO DO
+        //if time needs to be used in a smarter format reformat print with modulos to show seconds minutes and hours.
     }
 }
