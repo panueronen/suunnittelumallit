@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class PasswordProtector extends DataGuard {
     Scanner scanner = new Scanner(System.in);
 
-    public PasswordProtector(Data data){
+    public PasswordProtector(IDataAccess data){
         super(data);
     }
 
     @Override
-    public Data getData() {
+    public IDataAccess getData() {
         if(access()){
-            return data;
+            return data.getData();
         }
         return null;
     }
@@ -25,6 +25,5 @@ public class PasswordProtector extends DataGuard {
         }
         System.out.println("Password incorrect");
         return false;
-
     }
 }

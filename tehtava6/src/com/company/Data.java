@@ -8,7 +8,7 @@ public class Data implements IDataAccess{
     }
 
     @Override
-    public Data getData() {
+    public IDataAccess getData() {
         return this;
     }
 

@@ -3,12 +3,12 @@ package com.company;
 import java.util.Objects;
 
 public abstract class DataGuard implements IDataAccess{
-    protected Data data;
+    protected IDataAccess data;
 
-    public DataGuard(Data data){
+    public DataGuard(IDataAccess data){
         this.data=data;
     }
-    public Data getData(String password){
+    public IDataAccess getData(){
         return data.getData();
     }
 }
