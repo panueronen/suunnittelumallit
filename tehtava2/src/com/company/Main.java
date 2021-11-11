@@ -4,21 +4,23 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        String merkki = "adidas";
         Tehdas tehdas;
         Jasper jasper;
 
-        tehdas = new AdidasTehdas();
+
+        if (args.length <1 || "adidas".equals(args[0])) {
+            tehdas = new AdidasTehdas();
+        }else{
+            tehdas = new BossTehdas();
+        }
 
         jasper = new Jasper(tehdas.luoLippis(), tehdas.luoTPaita(), tehdas.luoFarmarit(), tehdas.luoKengat());
 
         System.out.println(jasper.paalla());
 
-        tehdas = new BossTehdas();
+        /*
         jasper.vaihdavaatteet(tehdas.luoLippis(), tehdas.luoTPaita(), tehdas.luoFarmarit(), tehdas.luoKengat());
         System.out.println(jasper.paalla());
-
-
-
+         */
     }
 }
