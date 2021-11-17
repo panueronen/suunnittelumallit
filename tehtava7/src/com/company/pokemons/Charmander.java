@@ -8,6 +8,7 @@ public class Charmander implements State {
     public Charmander(Context instance){
         this.instance = instance;
     }
+
     @Override
     public void attack() {
         System.out.println("Charmander syöksee tulta");

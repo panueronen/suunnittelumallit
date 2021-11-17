@@ -6,8 +6,8 @@ public class Main {
         Context pokemon = new Context();
 
         for(int i = 0; i < 10; i++){
-            pokemon.attack();
             pokemon.move();
+            pokemon.attack();
         }
 
     }

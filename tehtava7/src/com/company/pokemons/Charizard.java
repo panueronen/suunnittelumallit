@@ -9,6 +9,7 @@ public class Charizard implements State {
     public Charizard(Context instance){
         this.instance = instance;
     }
+
     @Override
     public void attack() {
         System.out.println("Charizard syöksee tulta");
