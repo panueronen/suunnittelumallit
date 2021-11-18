@@ -3,7 +3,7 @@ package com.company;
 public abstract class Game {
     protected int playersCount;
 
-    protected abstract void initializeGame(int playersCount);
+    protected abstract void initializeGame();
 
     protected abstract void makePlay(int player);
 
@@ -13,7 +13,7 @@ public abstract class Game {
 
     public final void playOneGame(int playersCount) {
         this.playersCount = playersCount;
-        initializeGame(playersCount);
+        initializeGame();
         var currentPlayer = 0;
         while (!endOfGame()) {
             makePlay(currentPlayer);

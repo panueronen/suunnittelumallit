@@ -13,9 +13,10 @@ public class Blackjack extends Game{
     Scanner scanner = new Scanner(System.in);
 
     @Override
-    protected void initializeGame(int playerscount) {
+    protected void initializeGame() {
+        System.out.println("Dealing hands for 2 players");
+        playerscount = 2;
         deck = new DeckOfCards();
-        this.playerscount = playerscount;
         //make hands
         hands = new ArrayList<>();
         for(int i = 0; i<this.playerscount; i++){
