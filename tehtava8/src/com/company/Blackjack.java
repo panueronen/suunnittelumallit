@@ -37,13 +37,16 @@ public class Blackjack extends Game{
                 System.out.println("BUST!");
                 break;
             }
+            System.out.println("Hand total is " + handTotal(player) + " With " + hands.get(player));
             System.out.println("Hit (h) or Stay (s)");
             choice = scanner.nextLine();
         }
             if(player == this.playerscount - 1){
                 this.end = true;
+            }else {
+                System.out.println("Next player");
             }
-            System.out.println("Next player");
+
     }
 
     @Override
