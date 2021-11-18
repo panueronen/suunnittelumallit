@@ -14,8 +14,7 @@ public class Blackjack extends Game{
 
     @Override
     protected void initializeGame() {
-        System.out.println("Dealing hands for 2 players");
-        playerscount = 2;
+        playerscount = super.playersCount;
         deck = new DeckOfCards();
         //make hands
         hands = new ArrayList<>();
