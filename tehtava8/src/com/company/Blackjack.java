@@ -27,7 +27,7 @@ public class Blackjack extends Game{
 
     @Override
     protected void makePlay(int player) {
-        System.out.println("Player " + player + " Your hand total is " + handTotal(player));
+        System.out.println("Player " + player + " Your hand total is " + handTotal(player) + " With " + hands.get(player));
         System.out.println("Hit (h) or Stay (s)");
         String choice = scanner.nextLine();
         while(choice.equals("h")){
@@ -81,7 +81,7 @@ public class Blackjack extends Game{
         for(int i = 0; i <hands.get(player).size();i++){
 
             //Handles the ace exception so the player does not lose because ace would take him above 21
-            if(total + hands.get(player).get(i).getNumericValue() > 21 && hands.get(player).get(i).getNumericValue() == 14){
+            if(total + hands.get(player).get(i).getNumericValue() > 21 && hands.get(player).get(i).getNumericValue() == 11){
                 total = total + 1;
             }else{
                 total = total + hands.get(player).get(i).getNumericValue();
