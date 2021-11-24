@@ -3,10 +3,11 @@ package com.company;
 import java.util.Random;
 
 public class Player implements Runnable {
-    private int playernumber;
-    private Object memento;
+    private final int playernumber;
+    private final Object memento;
     private Thread t;
 
+    //Constructor used by the Riddler class
     public Player(Object memento, int playernumber) {
         Riddler.joinGame();
         this.memento = memento;
@@ -17,8 +18,8 @@ public class Player implements Runnable {
     public void run() {
         System.out.println("Running " + playernumber);
         Random rn = new Random();
-        try {
-            while (!Riddler.correctGuess(rn.nextInt(10 + 1), this.memento, this.playernumber)) {
+        try { //random number generator that waits 50 ms after a failed guess the rerolls
+            while (!Riddler.correctGuess(rn.nextInt(10 +1), this.memento , this.playernumber)) {
                 Thread.sleep(50);
             }
         } catch (InterruptedException e) {

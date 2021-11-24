@@ -6,6 +6,7 @@ public class Riddler {
 
     private final int numberOfPlayers;
 
+    //Constructor for riddle that creates players and starts their game immediately
     public Riddler(int players) {
         numberOfPlayers = players;
 
@@ -15,12 +16,13 @@ public class Riddler {
 
     }
 
-
+    //Gives the players their number in a memento, Players store this as an Object
     public static Memento joinGame() {
         Random rn = new Random();
         return new Memento(rn.nextInt(10) + 1);
     }
 
+    //method that the player call to check if the number is correct
     public static boolean correctGuess(int guess, Object object, int player) {
         Memento memento = (Memento) object;
         if (guess == memento.getNumber()) {
