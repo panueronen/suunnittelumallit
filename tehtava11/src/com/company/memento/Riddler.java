@@ -4,13 +4,10 @@ import java.util.Random;
 
 public class Riddler {
 
-    private final int numberOfPlayers;
-
     //Constructor for riddle that creates players and starts their game immediately
     public Riddler(int players) {
-        numberOfPlayers = players;
 
-        for (int i = 0; i < numberOfPlayers; i++) {
+        for (int i = 0; i < players; i++) {
             new Player(Riddler.joinGame(), i + 1).start();
         }
 
