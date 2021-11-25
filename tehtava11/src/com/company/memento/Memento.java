@@ -1,6 +1,6 @@
-package com.company;
+package com.company.memento;
 
-public class Memento {
+class Memento {
 
     //Memento Object to be turned in to object
 

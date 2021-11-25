@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.memento.Riddler;
+
 import java.util.Random;
 
 public class Player implements Runnable {

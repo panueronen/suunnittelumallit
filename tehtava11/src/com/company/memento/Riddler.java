@@ -1,4 +1,6 @@
-package com.company;
+package com.company.memento;
+
+import com.company.Player;
 
 import java.util.Random;
 
