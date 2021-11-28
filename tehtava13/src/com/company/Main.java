@@ -6,23 +6,25 @@ import com.company.visitor.Visitor;
 public class Main {
 
     public static void main(String[] args) {
-	Player player1 = new Player("Jake");
-    Player player2 = new Player("Nea");
-    Player player3 = new Player("Laurie");
-    Player player4 = new Player("Bill");
 
-    player1.takeDamage();
-    player1.takeDamage();
-    player3.takeDamage();
+        Player[] players = new Player[4];
+        for(int i = 0; i < players.length; i ++){
+            players[i] = new Player(Integer.toString(i));
+        }
+
+        players[0].takeDamage();
+        players[2].takeDamage();
+        players[2].takeDamage();
 
     Visitor v = new BonusVisitor();
 
-    player1.getPoints();
-    player2.getPoints();
-    player3.getPoints();
-    player4.getPoints();
+    for(int i = 0; i < players.length;i++){
+        players[i].accept(v);
+    }
 
-
-
+    for (int i = 0; i < players.length; i++){
+        System.out.println(players[i].getPoints());
+    }
+    
     }
 }

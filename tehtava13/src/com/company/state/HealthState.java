@@ -6,5 +6,5 @@ public interface HealthState {
     public double movementSpeed();
     public Boolean breathingNoise();
     public Boolean gruntsOfPain();
-    public abstract void accept(Visitor v);
+    public abstract int accept(Visitor v);
 }

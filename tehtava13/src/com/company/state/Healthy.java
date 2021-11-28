@@ -1,19 +1,15 @@
 package com.company.state;
 
+import com.company.Player;
 import com.company.visitor.Visitor;
 
 public class Healthy implements HealthState {
+    private Player player;
 
-    private static Healthy instance = null;
+    public Healthy(Player player){
+        this.player = player;
+    };
 
-    private Healthy(){};
-
-    public static Healthy getInstance(){
-        if (instance == null){
-            instance = new Healthy();
-        }
-        return Healthy.instance;
-    }
 
     @Override
     public double movementSpeed() {
@@ -31,8 +27,8 @@ public class Healthy implements HealthState {
     }
 
     @Override
-    public void accept(Visitor v) {
-        v.visit(this);
+    public int accept(Visitor v) {
+        return v.visit(this);
     }
 
 }

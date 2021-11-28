@@ -1,19 +1,15 @@
 package com.company.state;
 
+import com.company.Player;
 import com.company.visitor.Visitor;
 
 public class Injured implements HealthState {
 
-    private static Injured instance = null;
+    private Player player;
 
-    private Injured(){
 
-    }
-    public static Injured getinstance(){
-        if(instance == null){
-            Injured.instance = new Injured();
-        }
-        return Injured.instance;
+    public Injured(Player player){
+        this.player = player;
     }
 
     @Override
@@ -32,8 +28,8 @@ public class Injured implements HealthState {
     }
 
     @Override
-    public void accept(Visitor v) {
-        v.visit(this);
+    public int accept(Visitor v) {
+        return v.visit(this);
     }
 
 }
