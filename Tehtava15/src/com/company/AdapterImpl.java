@@ -38,6 +38,4 @@ public class AdapterImpl implements Adapter {
     public String getHeight() {
         return String.valueOf(car.getHeight() * 2.54 + " Cm");
     }
-
-
 }
