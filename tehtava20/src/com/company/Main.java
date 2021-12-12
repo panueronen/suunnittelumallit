@@ -13,18 +13,21 @@ public class Main {
         System.out.println(list);
 
 
-        //Task part A
-        /*
 
 
 
         IteratorTest R1 = new IteratorTest(list);
         IteratorTest R2 = new IteratorTest(list);
         R1.start();
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         R2.start();
         System.out.println("***End of Task A ***");
 
-         */
+
         
         IteratorTestB R3 = new IteratorTestB(list);
         IteratorTestB R4 = new IteratorTestB(list);

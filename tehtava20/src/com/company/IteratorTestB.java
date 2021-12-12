@@ -6,7 +6,7 @@ import java.util.Iterator;
 public class IteratorTestB implements Runnable{
 
     private Thread t;
-    private final ArrayList<Integer> listOfNumbers;
+    private ArrayList<Integer> listOfNumbers;
 
     public IteratorTestB(ArrayList<Integer> list){
         this.listOfNumbers = list;
@@ -15,7 +15,7 @@ public class IteratorTestB implements Runnable{
     @Override
     public void run() {
         try{
-            IteratorForTests.iterate(listOfNumbers);
+            listOfNumbers = IteratorForTests.iterate(listOfNumbers);
             Thread.sleep(50);
         } catch (InterruptedException e) {
             e.printStackTrace();
